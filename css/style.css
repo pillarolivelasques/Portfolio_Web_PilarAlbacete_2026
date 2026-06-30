@@ -724,3 +724,34 @@ section {
     margin: 10px 0;
   }
 }
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #fffaf9;
+    padding: 20px;
+  }
+
+  #menu-toggle:checked + .menu-toggle + .main-nav {
+    display: flex;
+  }
+}
