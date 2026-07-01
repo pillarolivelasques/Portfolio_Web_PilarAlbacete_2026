@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Pilar Velasques</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap" rel="stylesheet">
+
+  <style>
+    .gallery-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 16px;
+      break-inside: avoid;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .gallery-grid img:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .gallery-grid {
+        column-count: 1;
+      }
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="media/img/logo pilarts webp.webp" alt="Logo Pilar Velasques">
+      </a>
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav class="main-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-title">
+      <h1>Gallery</h1>
+      <p>A look at different projects and pieces</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!--
+        ADICIONE SUAS FOTOS AQUI.
+        Copie uma linha <img ...> abaixo e troque o "src" pelo caminho da sua foto.
+        Coloque o arquivo dentro da pasta media/img/ (igual as outras fotos do site).
+      -->
+
+      <!-- Save the dates novos -->
+      <img src="media/img/rafaela e pablo save the date.webp" alt="Save the date - Rafaela e Pablo">
+      <img src="media/img/rafaella e tomas save the date.webp" alt="Save the date - Rafaella e Tomas">
+      <img src="media/img/sandy e rodrigo save the date.webp" alt="Save the date - Sandy e Rodrigo">
+      <img src="media/img/ale e juca save the date.webp" alt="Save the date - Ale e Juca">
+      <img src="media/img/rafa save the date.webp" alt="Save the date - Rafaela e Daniel">
+      <img src="media/img/bruna e raul save the date.webp" alt="Save the date - Bruna e Raul">
+      <img src="media/img/roberta e guilherme save the date.webp" alt="Save the date - Roberta e Guilherme">
+      <img src="media/img/simone e karl save the date.webp" alt="Save the date - Simone e Karl">
+      <img src="media/img/simone e karl map.webp" alt="Mapa do casamento - Simone e Karl, Amalfi Coast">
+      <img src="media/img/stephanie e lu save the date.webp" alt="Save the date - Stephanie e Lu">
+      <img src="media/img/carol e andre save the date.webp" alt="Save the date - Carol e Andre">
+      <img src="media/img/stephanie e rafael save the date.webp" alt="Save the date - Stephanie e Rafael">
+      <img src="media/img/tamiris e jackson save the date.webp" alt="Save the date - Tamiris e Jackson">
+      <img src="media/img/virginia e davide save the date.webp" alt="Save the date - Virginia e Davide">
+      <img src="media/img/ana beatriz e rogerio save the date.webp" alt="Save the date - Ana Beatriz e Rogerio">
+      <img src="media/img/ana julia e willy save the date.webp" alt="Save the date - Ana Julia e Willy">
+      <img src="media/img/ana luiza carta de drinks.webp" alt="Carta de drinks - Ana Luiza">
+
+      <!-- Projetos já existentes no site -->
+      <img src="media/img/malu e lineu webp.webp" alt="Malu e Lineu">
+      <img src="media/img/gabriela e arbel 1 .webp" alt="Gabriela e Arbel">
+      <img src="media/img/camila e felipe para portfolio webp.webp" alt="Camila e Felipe">
+      <img src="media/img/daline e pedro webp.webp" alt="Daline e Pedro">
+      <img src="media/img/mockup ju e alexandre portfolio webp.webp" alt="Juliana e Alexandre">
+
+      <!-- Cole mais fotos aqui embaixo, seguindo o mesmo padrão -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="" id="lightbox-img">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2024 Pilar Velasques — All rights reserved.</p>
+      <p class="footer-contact">
+        <a href="mailto:pillartssl@gmail.com">pillartssl@gmail.com</a>
+        |
+        <a href="https://www.instagram.com/pillartss" target="_blank">@pillartss</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  </script>
+
+</body>
+</html>
