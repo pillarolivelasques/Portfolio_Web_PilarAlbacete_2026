@@ -360,7 +360,7 @@ nav.main-nav {
   .main-nav a {
     text-decoration: none;
     color: #2D2A26;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
   }
@@ -722,36 +722,5 @@ section {
 
   .main-nav a {
     margin: 10px 0;
-  }
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: #fffaf9;
-    padding: 20px;
-  }
-
-  #menu-toggle:checked + .menu-toggle + .main-nav {
-    display: flex;
   }
 }

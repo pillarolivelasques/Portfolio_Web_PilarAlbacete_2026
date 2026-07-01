@@ -5,8 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="media/img/laco pilarts webp.webp" rel="icon" type="image/png">
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <title>Pilar Velasques</title>
+
+  <style>
+    /* ===== Hero com vídeo em tela cheia ===== */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-video-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 1;
+    }
+
+    .hero-video .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-video .subtitle {
+      color: #fff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+
+    .hero-video .title {
+      color: #fff;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 200;
+      font-size: clamp(3rem, 8vw, 6rem);
+      margin: 0;
+    }
+
+    .signature-logo {
+      height: 42px;
+      width: auto;
+      filter: brightness(0.9);
+    }
+
+    .hero-signature {
+      width: min(70vw, 380px);
+      height: auto;
+      margin: 10px auto 22px;
+      filter: brightness(0) invert(1);
+      display: block;
+    }
+
+    .hero-video .intro {
+      color: #fff;
+      max-width: 500px;
+      margin: 0 auto 28px;
+      font-weight: 200;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* ===== Seção editorial (estilo Ofelia Botella) ===== */
+    .story-section {
+      padding: 70px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .story-heading {
+      text-align: center;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 14px;
+    }
+
+    .story-subheading {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-weight: 200;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: 0.85;
+    }
+
+    .story-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .story-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .story-row img {
+      flex: 1 1 420px;
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .story-text {
+      flex: 1 1 380px;
+    }
+
+    .story-text p {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      font-weight: 200;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .story-cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .story-row, .story-row.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +161,7 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="media/img/logo pilarts webp.webp" alt="Logo Pilar Velasques">
+        <img src="media/img/assinatura pilar velasques.webp" alt="Pilar Velasques" class="signature-logo">
       </a>
     </div>
     <div class="menu-toggle">☰</div>
@@ -23,27 +170,64 @@
       <a href="#projects">Projects</a>
       <a href="gallery.html">Gallery</a>
       <a href="#contact">Contact</a>
-      <a href="about.html">About me</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
+  <!-- Hero Section com vídeo em tela cheia -->
+  <section class="hero-video" id="home">
+    <video autoplay muted loop playsinline>
+      <source src="media/img/0624.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+
     <div class="container">
       <p class="subtitle">Wedding Stationery Designer</p>
-
-      <h1 class="title">
-        Pilar Velasques
-      </h1>
-
+      <img src="media/img/assinatura pilar velasques.webp" alt="Pilar Velasques" class="hero-signature">
+      <h1 class="title" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Pilar Velasques</h1>
       <p class="intro">
         Creating bespoke watercolor wedding identities inspired by love stories around the world.
       </p>
-
       <div class="buttons">
         <a href="#projects" class="btn">View Work</a>
         <a href="#contact" class="btn outline">Say Hi</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Editorial / Story Section -->
+  <section class="story-section">
+    <h2 class="story-heading">Art that tells your story</h2>
+    <p class="story-subheading">
+      Every couple carries a story worth painting — a sunrise ceremony, a childhood beach,
+      a family chapel. My work begins there, with watercolor as the language and your
+      memories as the muse.
+    </p>
+
+    <div class="story-row">
+      <img src="media/img/malu e lineu webp.webp" alt="Watercolor wedding suite">
+      <div class="story-text">
+        <p>
+          Each commission starts as a conversation — about where you met, what you love,
+          the small details only the two of you would notice. From there, I paint: soft
+          washes of color that become invitations, save the dates, and keepsakes meant
+          to be kept for a lifetime.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-row reverse">
+      <img src="media/img/gabriela e arbel 1 .webp" alt="Hand-painted wedding details">
+      <div class="story-text">
+        <p>
+          Whether it's a sunrise at Christ the Redeemer, a garden in Toledo, or a beach
+          in Bahia, I bring the setting into the paper itself — so your guests hold a
+          little piece of the place before they've even arrived.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-cta">
+      <a href="#contact" class="btn outline">Work With Me</a>
     </div>
   </section>
 
@@ -126,10 +310,12 @@
     <div class="container">
       <h2>Let’s talk 💌</h2>
       <p>If you’re interested in working together or just want to say hi, I’d love to hear from you!</p>
-      <form class="contact-form" action="mailto:pillartssl@gmail.com" method="POST" enctype="text/plain">
+      <form class="contact-form" action="https://formspree.io/f/xnjkgzjw" method="POST">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" required></textarea>
+        <input type="date" name="wedding_date" placeholder="Wedding date">
+        <input type="text" name="wedding_location" placeholder="Wedding location (city, country)">
+        <textarea name="message" placeholder="Tell me a bit about your wedding..." required></textarea>
         <button type="submit" class="btn outline">Send Message</button>
       </form>
     </div>
