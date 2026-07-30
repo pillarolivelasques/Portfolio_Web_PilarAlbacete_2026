@@ -15,4 +15,30 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // Pequenas animacoes ao rolar a pagina
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealSelectors = '.story-row, .pkg-card, .project, .cv-block, .facts-col, .express-steps > div, .about-duo img, .meet-artist, .gallery-grid img, .express-note';
+  const revealEls = document.querySelectorAll(revealSelectors);
+
+  if (revealEls.length && !prefersReducedMotion) {
+    revealEls.forEach(function (el, i) {
+      el.classList.add('reveal');
+      // pequeno atraso escalonado para elementos lado a lado (galeria, cards)
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 });

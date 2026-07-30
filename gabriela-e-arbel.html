@@ -5,6 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Watercolor wedding stationery suite for Gabriela & Arbel, designed by Pilar Velasques (Pillartss)." />
   <link rel="stylesheet" href="css/style.css" />
     
 
@@ -16,14 +17,17 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="media/img/assinatura pilar velasques (1).webp" alt="Logo Pilar Velasques">
+        <img src="media/img/assinatura pilar velasques nova.webp" alt="Pilar Velasques" class="signature-logo" loading="lazy">
       </a>
     </div>
     <div class="menu-toggle">☰</div>
     <nav class="main-nav">
       <a href="index.html#home">Home</a>
       <a href="index.html#projects">Projects</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="gallery.html">Collections</a>
+      <a href="pricing.html">Packages</a>
+      <a href="websites-print.html">Websites &amp; Print</a>
+      <a href="about.html">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
@@ -32,13 +36,13 @@
   <section class="hero">
     <div class="container">
       <h1>Gabriela & Arbel</h1>
-      <p class="project-subtitle">Wedding Stationary - Rio de janeiro, Brasil</p>
+      <p class="project-subtitle">Wedding Stationery - Rio de janeiro, Brasil</p>
       <p class="details">
-        A destination wedding invitation surrounded by tropical beauty — featuring hand-drawn parrots, golden details, and a delicate illustration of the venue. A blend of nature and elegance, just like their love story
+        A destination wedding invitation wrapped in tropical beauty — hand-drawn parrots, golden details, and a delicate illustration of the venue itself. Nature and elegance side by side, just like the love story it celebrates.
       </p>
       <div class="laranja-moldura">
-        <img src="media/img/passaro arbel.webp" class="laranja esquerda" alt="Laranja esquerda">
-        <img src="media/img/passaro gabriela e arbel .webp" class="laranja direita" alt="Laranja direita">
+        <img src="media/img/passaro arbel.webp" class="laranja esquerda" alt="Laranja esquerda" loading="lazy">
+        <img src="media/img/passaro gabriela e arbel .webp" class="laranja direita" alt="Laranja direita" loading="lazy">
       </div>
     </div>
   </section>
@@ -46,28 +50,33 @@
   <!-- Project Images Section -->
   <section class="projects">
     <div class="project-images">
-      <img src="media/img/gabriela e arbel 1 .webp" alt="Invitation">
-      <img src="media/img/gabriela e arbel.webp" alt="Menu Design">
+      <img src="media/img/gabriela e arbel 1 .webp" alt="Invitation" loading="lazy">
+      <img src="media/img/gabriela e arbel.webp" alt="Menu Design" loading="lazy">
       <div class="image-row">
-        <img src="media/img/gabriela e arbel 2 .webp" alt="Vertical 1">
-        <img src="media/img/gabriela e arbel 3.webp" alt="Vertical 2">
+        <img src="media/img/gabriela e arbel 2 .webp" alt="Vertical 1" loading="lazy">
+        <img src="media/img/gabriela e arbel 3.webp" alt="Vertical 2" loading="lazy">
       </div>
-      <img src="media/img/gabriela e arbel 6 .webp" alt="Extra 1">
-      <img src="media/img/gabriela e arbel 4.webp" alt="Extra 2">
+      <img src="media/img/gabriela e arbel 6 .webp" alt="Extra 1" loading="lazy">
+      <img src="media/img/gabriela e arbel 4.webp" alt="Extra 2" loading="lazy">
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <p>© 2024 Pilar Velasques — All rights reserved.</p>
+      <p>© <span class="footer-year">2026</span> Pilar Velasques — All rights reserved.</p>
       <p class="footer-contact">
-        <a href="mailto:pillartssl@gmail.com">pillartssl@gmail.com</a>
+        <a href="mailto:contact@pillartss.com">contact@pillartss.com</a>
         <a href="https://www.instagram.com/pillartss" target="_blank">@pillartss</a>
       </p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.footer-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
