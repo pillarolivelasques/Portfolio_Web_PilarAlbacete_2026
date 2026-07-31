@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Pillartss wedding stationery packages — Basic, Classic, Premium and Luxury watercolor suites for your wedding." />
+  <link href="media/img/laco pilarts webp.webp" rel="icon" type="image/png">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Packages | Pillar Velasques</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    .pkg-hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 120px 24px 20px;
+      text-align: center;
+    }
+    .pkg-hero .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0.6;
+      margin-bottom: 14px;
+    }
+    .pkg-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: clamp(3rem, 8vw, 4.6rem);
+      margin: 0 0 20px;
+    }
+    .pkg-hero p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.85;
+    }
+
+    .pkg-grid {
+      max-width: 1100px;
+      margin: 50px auto 30px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 800px) {
+      .pkg-grid { grid-template-columns: 1fr; }
+    }
+
+    .pkg-card {
+      border: 1px solid rgba(0,0,0,0.18);
+      padding: 44px 38px;
+      display: flex;
+      flex-direction: column;
+    }
+    .pkg-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      margin: 0 0 18px;
+    }
+    .pkg-card .pkg-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .pkg-card .pkg-label {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      opacity: 0.55;
+      margin-bottom: 14px;
+    }
+    .pkg-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px;
+      flex-grow: 1;
+    }
+    .pkg-card li {
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+      padding: 7px 0;
+      opacity: 0.85;
+    }
+    .pkg-card .pkg-note {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .pkg-card .btn {
+      align-self: flex-start;
+    }
+
+    .pkg-addons {
+      max-width: 800px;
+      margin: 60px auto 0;
+      padding: 50px 24px 100px;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    .pkg-addons p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+
+    /* ===== Secao Pillartss Express (dentro de Packages) ===== */
+    .sub-section {
+      max-width: 1000px;
+      margin: 90px auto 0;
+      padding: 60px 24px 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    #express {
+      position: relative;
+      overflow: visible;
+    }
+    #express .butterfly-decoration.express-1 {
+      top: -6%;
+      left: 4%;
+      width: 70px;
+    }
+    #express .butterfly-decoration.express-2 {
+      top: 4%;
+      right: 6%;
+      width: 60px;
+    }
+    .sub-section .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0.6;
+      margin-bottom: 14px;
+    }
+    .sub-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      margin: 0 0 20px;
+    }
+    #live-painting .eyebrow {
+      font-size: 1.05rem;
+      letter-spacing: 4px;
+      opacity: 0.7;
+      margin-bottom: 18px;
+    }
+    #live-painting h2 {
+      font-size: clamp(3rem, 9vw, 5.2rem);
+      line-height: 1.05;
+      font-style: italic;
+      font-weight: 400;
+      color: #a02b66;
+      max-width: 900px;
+      margin: 0 auto 8px;
+    }
+    .sub-section > p {
+      max-width: 680px;
+      margin: 0 auto 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.85;
+    }
+    .express-steps {
+      max-width: 900px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .express-steps { grid-template-columns: 1fr; }
+    }
+    .express-steps .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 200;
+      opacity: 0.35;
+      margin-bottom: 10px;
+    }
+    .express-steps h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin: 0 0 10px;
+    }
+    .express-steps p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+    .express-note {
+      max-width: 640px;
+      margin: 0 auto 30px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* ===== Secao Websites & Print (dentro de Packages) ===== */
+    .wp-block {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+    .wp-block.reverse {
+      flex-direction: row-reverse;
+    }
+    .wp-block-text {
+      flex: 1 1 380px;
+    }
+    .wp-block-text .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      opacity: 0.55;
+      margin-bottom: 12px;
+    }
+    .wp-block-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 0 0 16px;
+    }
+    .wp-block-text p {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 200;
+      font-size: 1rem;
+      line-height: 1.8;
+      opacity: 0.88;
+      margin-bottom: 16px;
+    }
+    .wp-block-visual {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .wp-tier {
+      border: 1px solid rgba(0,0,0,0.15);
+      padding: 24px 26px;
+    }
+    .wp-tier h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin: 0 0 12px;
+    }
+    .wp-tier ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      opacity: 0.85;
+    }
+    .wp-tier .wp-note {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      opacity: 0.6;
+    }
+    @media (max-width: 750px) {
+      .wp-block, .wp-block.reverse { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <filter id="roughPaper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="4"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+    </filter>
+  </svg>
+
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="media/img/assinatura pilar velasques nova.webp" alt="Pillar Velasques" class="signature-logo">
+      </a>
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav class="main-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="gallery.html">Painted Stories</a>
+      <a href="pricing.html">Packages</a>
+      <a href="websites-print.html">Websites &amp; Print</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="pkg-hero">
+    <p class="eyebrow">Wedding Stationery Packages</p>
+    <div class="bee-cluster">
+      <img src="media/img/abelha interativa 2.webp" alt="" class="bee-decoration bee-1">
+      <img src="media/img/abelha interativa 2.webp" alt="" class="bee-decoration bee-2">
+      <img src="media/img/abelha interativa 2.webp" alt="A little bee, buzzing by" class="bee-decoration bee-3">
+      <img src="media/img/abelha interativa 2.webp" alt="" class="bee-decoration bee-4">
+      <h1>Find your fit</h1>
+    </div>
+    <p>
+      Every package is fully hand-painted in watercolor and built around your story.
+      Not sure which one is right for you? Reach out and I'll help you figure it out.
+    </p>
+  </section>
+
+  <!-- Package cards -->
+  <div class="pkg-grid">
+
+    <div class="pkg-card">
+      <h2>Basic</h2>
+      <ul>
+        <li>Save the date (digital)</li>
+        <li>Digital + printed invitation</li>
+        <li>Hand-painted watercolor</li>
+        <li>Initials logo</li>
+      </ul>
+      <a href="index.html#contact" class="btn outline">Work With Me</a>
+    </div>
+
+    <div class="pkg-card">
+      <h2>Classic</h2>
+      <ul>
+        <li>Everything in Basic</li>
+        <li>Watercolor menu (6 items)</li>
+        <li>Watercolor drinks card (6 items)</li>
+      </ul>
+      <p class="pkg-note">Extra menu/drink items available on request.</p>
+      <a href="index.html#contact" class="btn outline">Work With Me</a>
+    </div>
+
+    <div class="pkg-card">
+      <h2>Premium</h2>
+      <ul>
+        <li>Everything in Classic</li>
+        <li>Happy tears cards</li>
+        <li>Table numbers &amp; reserved signs</li>
+        <li>Favor tags (1 design)</li>
+        <li>Vow booklet</li>
+        <li>Bridal party box</li>
+        <li>Petal cones</li>
+        <li>Bathroom kit</li>
+      </ul>
+      <a href="index.html#contact" class="btn outline">Work With Me</a>
+    </div>
+
+    <div class="pkg-card">
+      <h2>Luxury</h2>
+      <ul>
+        <li>Everything in Premium</li>
+        <li>Bridal party guide</li>
+        <li>Wedding day timeline</li>
+      </ul>
+      <p class="pkg-note">Extra menu/drink items and additional favor designs available on request.</p>
+      <a href="index.html#contact" class="btn outline">Work With Me</a>
+    </div>
+
+  </div>
+
+  <!-- Add-ons note -->
+  <section class="pkg-addons">
+    <p>
+      Prefer to build your own suite piece by piece? Individual items — from a single
+      watercolor to a full wedding website — are also available separately.
+      Message me and I'll put together a custom quote just for you.
+    </p>
+    <a href="index.html#contact" class="btn">Get a Custom Quote</a>
+  </section>
+
+  <!-- Pillartss Express -->
+  <section class="sub-section" id="express">
+    <img src="media/img/borboleta azul.webp" alt="" class="butterfly-decoration butterfly-1 express-1">
+    <img src="media/img/borboleta rosa.webp" alt="" class="butterfly-decoration butterfly-2 express-2">
+    <p class="eyebrow">New</p>
+    <h2>Pillartss Express</h2>
+    <p>
+      A curated bank of ready-made watercolor designs — you pick the one that
+      fits your story, and I personalize it with your names, date and
+      colors. Same Pillartss quality, a faster process, and a more
+      accessible way to start.
+    </p>
+    <div class="express-steps">
+      <div>
+        <p class="step-num">01</p>
+        <h3>Choose a design</h3>
+        <p>Browse the illustration bank and pick the piece that speaks to you.</p>
+      </div>
+      <div>
+        <p class="step-num">02</p>
+        <h3>Personalize it</h3>
+        <p>Send me your names, date, colors and details — I take it from there.</p>
+      </div>
+      <div>
+        <p class="step-num">03</p>
+        <h3>Receive it</h3>
+        <p>Your piece arrives ready to use, usually within a few business days.</p>
+      </div>
+    </div>
+    <p class="express-note">The illustration bank is being curated right now — reach out and I'll walk you through what's available today.</p>
+    <a href="index.html#contact" class="btn outline">Ask About Express</a>
+  </section>
+
+  <!-- Live Painting -->
+  <section class="sub-section" id="live-painting">
+    <p class="eyebrow">Live Painting</p>
+    <h2>Watch it become art, in real time</h2>
+  </section>
+
+  <div class="stripe-band-thin"></div>
+
+  <div class="wp-block">
+    <div class="wp-block-text">
+      <p class="eyebrow">How it works</p>
+      <h3>Your celebration, painted as it happens</h3>
+      <p>
+        I set up an easel right at your event — ceremony, reception, or
+        party — and paint live while everything unfolds around me. Guests
+        get to watch the piece come together in real time, and you're left
+        with a one-of-a-kind memory of that exact day, painted from life,
+        not from a photo afterward.
+      </p>
+      <p>
+        I can paint the ceremony itself as it happens, or set up during the
+        reception to paint your guests live — a fun, interactive moment
+        everyone remembers, and a keepsake for you both.
+      </p>
+      <p>
+        It works beautifully for weddings, but also birthdays, anniversaries,
+        launches — any moment worth capturing as it's actually happening.
+      </p>
+      <a href="index.html#contact" class="btn outline">Book Live Painting</a>
+    </div>
+    <div class="wp-block-visual">
+      <img src="media/img/pilar pintando detalhe.webp" alt="Pillar Velasques painting live at an event" loading="lazy" style="width:100%; border-radius:2px; display:block;">
+      <div class="wp-tier">
+        <h4>What to expect</h4>
+        <ul>
+          <li>On-site setup, easel &amp; materials included</li>
+          <li>Painting created live during your event</li>
+          <li>Finished, framable piece delivered after</li>
+          <li>Available for weddings and other celebrations</li>
+        </ul>
+        <p class="wp-note">Travel and event details are quoted based on location and event length.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-cta" style="text-align:center; padding: 20px 24px 100px;">
+    <a href="index.html#contact" class="btn outline">Let's Talk</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© <span class="footer-year">2026</span> Pillar Velasques — All rights reserved.</p>
+      <p class="footer-contact">
+        <a href="mailto:contact@pillartss.com">contact@pillartss.com</a> |
+        <a href="https://www.instagram.com/pillartss" target="_blank">@pillartss</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.footer-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
