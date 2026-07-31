@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Watercolor art and design by Pilar Velasques (Pillartss) — bespoke identities, illustration and creative projects. Based in Madrid, working worldwide." />
+  <meta name="description" content="Watercolor art and design by Pillar Velasques (Pillartss) — bespoke identities, illustration and creative projects. Based in Madrid, working worldwide." />
   <link href="media/img/laco pilarts webp.webp" rel="icon" type="image/png">
   <link rel="stylesheet" href="css/style.css" />
     
 
-  <title>Pilar Velasques</title>
+  <title>Pillar Velasques</title>
 
   <style>
     /* ===== Hero com vídeo em tela cheia ===== */
@@ -233,14 +233,14 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="media/img/assinatura pilar velasques nova.webp" alt="Pilar Velasques" class="signature-logo" loading="lazy">
+        <img src="media/img/assinatura pilar velasques nova.webp" alt="Pillar Velasques" class="signature-logo" loading="lazy">
       </a>
     </div>
     <div class="menu-toggle">☰</div>
     <nav class="main-nav">
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
-      <a href="gallery.html">Collections</a>
+      <a href="gallery.html">Painted Stories</a>
       <a href="pricing.html">Packages</a>
       <a href="websites-print.html">Websites &amp; Print</a>
       <a href="about.html">About</a>
@@ -257,8 +257,8 @@
 
     <div class="container">
       <p class="subtitle">Artist &middot; Illustrator &middot; Creative Studio</p>
-      <img src="media/img/assinatura pilar velasques nova.webp" alt="Pilar Velasques" class="hero-signature" loading="lazy">
-      <h1 class="title" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Pilar Velasques</h1>
+      <img src="media/img/assinatura pilar velasques nova.webp" alt="Pillar Velasques" class="hero-signature" loading="lazy">
+      <h1 class="title" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Pillar Velasques</h1>
       <p class="intro">
         Original artwork for celebrations, brands, keepsakes, and places
         worth remembering.
@@ -312,10 +312,10 @@
 
   <!-- What I Create -->
   <section class="create-section framed-section">
-    <img src="media/img/moldura ponta unica.webp" alt="" class="frame-corner top-left">
-    <img src="media/img/moldura ponta unica.webp" alt="" class="frame-corner bottom-left">
-    <img src="media/img/moldura ponta unica.webp" alt="" class="frame-corner top-right">
-    <img src="media/img/moldura ponta unica.webp" alt="" class="frame-corner bottom-right">
+    <img src="media/img/moldura canto.webp" alt="" class="frame-corner top-left">
+    <img src="media/img/moldura canto.webp" alt="" class="frame-corner bottom-left">
+    <img src="media/img/moldura canto.webp" alt="" class="frame-corner top-right">
+    <img src="media/img/moldura canto.webp" alt="" class="frame-corner bottom-right">
     <img src="media/img/borboleta azul.webp" alt="" class="butterfly-decoration butterfly-1">
     <img src="media/img/borboleta rosa clara.webp" alt="" class="butterfly-decoration butterfly-2">
     <img src="media/img/borboleta rosa.webp" alt="" class="butterfly-decoration butterfly-3">
@@ -349,26 +349,6 @@
           <p>Homes, travels, meaningful places and one-of-a-kind gifts.</p>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Pillartss Express teaser -->
-  <section class="story-section" style="padding-top: 20px;">
-    <h2 class="story-heading">Pillartss Express</h2>
-
-    <div class="story-row">
-      <img src="media/img/pilar pintando detalhe.webp" alt="Pilar mixing watercolor" loading="lazy">
-      <div class="story-text">
-        <p>
-          A curated bank of ready-made watercolor designs, personalized
-          with your names, date and colors — same Pillartss quality,
-          delivered faster.
-        </p>
-      </div>
-    </div>
-
-    <div class="story-cta">
-      <a href="pricing.html#express" class="btn outline">Discover Express</a>
     </div>
   </section>
 
@@ -442,6 +422,8 @@
     </div>
   </section>
 
+  <div class="stripe-band-thin"></div>
+
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
@@ -450,7 +432,7 @@
       <form class="contact-form" action="https://formspree.io/f/xnjkgzjw" method="POST">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
-        <select name="project_type" required>
+        <select name="project_type" id="project-type" required>
           <option value="" disabled selected>What are you looking for?</option>
           <option value="Custom Wedding Suite">Custom Wedding Suite</option>
           <option value="Pillartss Express">Pillartss Express</option>
@@ -458,8 +440,10 @@
           <option value="Workshop">Workshop</option>
           <option value="Other">Something else</option>
         </select>
-        <input type="date" name="wedding_date" placeholder="Wedding date">
-        <input type="text" name="wedding_location" placeholder="Wedding location (city, country)">
+        <div id="wedding-fields" style="display:none;">
+          <input type="date" name="wedding_date" placeholder="Wedding date">
+          <input type="text" name="wedding_location" placeholder="Wedding location (city, country)">
+        </div>
         <textarea name="message" placeholder="Tell me a bit about your story..." required></textarea>
         <button type="submit" class="btn">Send My Story</button>
       </form>
@@ -469,7 +453,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <p>© <span class="footer-year">2026</span> Pilar Velasques — All rights reserved.</p>
+      <p>© <span class="footer-year">2026</span> Pillar Velasques — All rights reserved.</p>
       <p class="footer-contact">
         <a href="mailto:contact@pillartss.com">contact@pillartss.com</a> |
         <a href="https://www.instagram.com/pillartss" target="_blank">@pillartss</a>
