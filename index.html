@@ -205,6 +205,15 @@
     a.create-item:hover h3::after {
       transform: scaleX(1);
     }
+    /* Efeito de toque no celular (hover não existe em touch) */
+    a.create-item:active {
+      transform: translateY(-2px);
+      background-color: rgba(242, 153, 197, 0.16);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    }
+    a.create-item:active h3::after {
+      transform: scaleX(1);
+    }
     .create-item p {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
@@ -217,12 +226,23 @@
       .create-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 500px) {
-      .create-grid { grid-template-columns: 1fr; gap: 34px; }
+      .create-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; }
     }
 
     @media (max-width: 700px) {
       .story-row, .story-row.reverse {
         flex-direction: column;
+      }
+      .story-row img {
+        max-width: 320px;
+        margin: 0 auto;
+        flex-basis: auto;
+      }
+      .story-row {
+        margin-bottom: 30px;
+      }
+      .story-cta {
+        margin-top: 0;
       }
     }
   </style>

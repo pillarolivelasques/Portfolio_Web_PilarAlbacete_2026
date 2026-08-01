@@ -300,7 +300,7 @@ body {
 
 /*  HEADER */
 header {
-  background-color: #fff;
+  background-color: #FDF8F3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -841,8 +841,7 @@ nav.main-nav a {
   
   .project img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -1161,9 +1160,33 @@ img {
     font-size: 24px;
   }
 
+  .project-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .project-link {
+    width: calc(50% - 7px);
+  }
+
   .project {
     width: 100%;
-    max-width: 340px;
+    max-width: none;
+  }
+
+  .project-details {
+    padding: 10px;
+  }
+
+  .project-details h3 {
+    font-size: 14px;
+  }
+
+  .project-details p {
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .contact {

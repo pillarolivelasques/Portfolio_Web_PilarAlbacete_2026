@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', function () {
       mainNav.classList.toggle('active');
+      menuToggle.classList.toggle('is-open', mainNav.classList.contains('active'));
       menuToggle.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
     });
 
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mainNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         mainNav.classList.remove('active');
+        menuToggle.classList.remove('is-open');
         menuToggle.textContent = '☰';
       });
     });
